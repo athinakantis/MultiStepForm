@@ -1,0 +1,255 @@
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.2);
+}
+
+#mainContainer {
+  display: flex;
+  width: 900px;
+  height: 620px;
+  margin: 0 2rem;
+  border-radius: var(--borderRadius);
+  background-color: var(--white);
+}
+
+section {
+  background-color: var(--white);
+}
+
+input {
+  font-family: inherit;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0.5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+nav {
+  margin: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#confirm {
+  background-color: var(--purplishBlue);
+  color: var(--white);
+  padding: 0.9rem 1.3rem;
+
+  &:hover {
+    background-color: var(--pastelBlue);
+  }
+}
+
+#nextStep {
+  background-color: var(--darkBlue);
+  color: var(--white);
+  width: max-content;
+  padding: 0.9rem 1.3rem;
+  margin: auto 0 0 auto;
+
+  &:hover {
+    background-color: var(--marineBlue);
+  }
+}
+
+#goBack {
+  background-color: transparent;
+  color: var(--coolGray);
+  font-weight: var(--fontMedium);
+
+  &:hover {
+    color: var(--marineBlue);
+  }
+}
+
+#attribution {
+  position: absolute;
+  bottom: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 790px) {
+  #personalInfoContainer .page {
+    padding: 3rem 2rem 2rem;
+  }
+
+  #stepOverview .stepNum {
+    margin: 2rem 1.2rem 0;
+  }
+}
+
+@media only screen and (max-width: 565px) {
+  #mainContainer {
+    background-color: transparent;
+    flex-direction: column;
+    margin: 0;
+    position: relative;
+    align-items: center;
+  }
+
+  main {
+    align-items: start;
+  }
+
+  .stepDetails {
+    display: none;
+  }
+
+  #mainContainer :is(.page, #confirmation) {
+    border-top-right-radius: var(--borderRadius);
+    border-bottom-right-radius: var(--borderRadius);
+    z-index: 2;
+    margin: 0 1rem;
+    background-color: var(--white);
+    top: 120px;
+    border-radius: 10px;
+    padding: 2rem;
+    top: 150px;
+    position: absolute;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .page h2 {
+    font-size: 2.2rem;
+  }
+
+  .pageDescription {
+    font-size: 1.2rem;
+  }
+
+  #mainContainer #stepOverview {
+    background-image: url(assets/images/bg-sidebar-mobile.svg);
+    border-radius: 0;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    margin: 0;
+  }
+
+  #stepOverview .stepNum {
+    margin: 3rem 0.6rem 0;
+  }
+
+  #stepOverview .num {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  #nextStep {
+    margin: 0 0 0 auto;
+  }
+
+  #goBack {
+    margin: 0 auto 0 0;
+  }
+
+  nav {
+    font-size: 1.2rem;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--white);
+    width: 100%;
+    left: 0;
+    padding: 1rem;
+  }
+
+  .page .plans {
+    flex-direction: column;
+    margin: 0 0 1.5rem;
+  }
+
+  .page .plans .planCard {
+    display: flex;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .page .planCard .description .title {
+    font-size: 1.2rem;
+  }
+
+  .page .planCard .description .pricing {
+    font-size: 1.1rem;
+  }
+
+  .page .planCard .description .free {
+    font-size: 1rem;
+  }
+
+  .page .planCard img {
+    margin: 0;
+    width: 3rem;
+    height: max-content;
+  }
+
+  .page .switch p {
+    font-size: 1.2rem;
+  }
+
+  .page .switch {
+    gap: 2rem;
+  }
+
+  #addOnContainer .addOn .title {
+    font-size: 1.1rem;
+  }
+
+  #addOnsContainer #addOnContainer .addOn .description {
+    font-size: 1rem;
+  }
+
+  #addOnsContainer #addOnContainer input {
+    width: 1.7rem;
+    height: 1.6rem;
+  }
+
+  #addOnsContainer input:checked::after {
+    width: 1.7rem;
+    height: 1.6rem;
+    background-size: 70%;
+  }
+
+  .summaryContainer :is(.currentPlan, .addOn, #changePlan) {
+    font-size: 1.2rem;
+  }
+
+  #summaryPage #totalCost {
+    font-size: 1.2rem;
+    padding: 2.5rem 1.5rem 0;
+  }
+
+  #mainContainer #summaryPageContainer {
+    padding: 2rem 2rem 2.5rem;
+  }
+
+  #mainContainer #confirmation {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #mainContainer #confirmation img {
+    margin: 0 0 2rem;
+  }
+
+  #mainContainer #confirmation p {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+}

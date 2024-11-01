@@ -1,0 +1,68 @@
+.page {
+  padding: 3rem 4rem 2rem;
+  flex: 3;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2.1rem;
+  color: var(--marineBlue);
+  margin: 0 0 1rem;
+}
+
+.pageDescription {
+  color: var(--coolGray);
+  letter-spacing: -0.5px;
+  margin: 0 0 2rem;
+}
+
+.formContainer label {
+  color: var(--marineBlue);
+  font-weight: var(--fontMedium);
+  font-size: 0.9rem;
+}
+
+#personalInfoContainer .formContainer input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin: 8px 0 1.5rem;
+  line-height: 1.4;
+  border: 1px solid var(--lightGray);
+  font-weight: var(--fontMedium);
+  color: var(--marineBlue);
+
+  &:focus,
+  &:active {
+    outline: 1px solid var(--purplishBlue);
+  }
+
+  &:invalid {
+    outline: 1px solid var(--strawberryRed);
+  }
+
+  &::placeholder {
+    color: var(--coolGray);
+    font-weight: var(--fontLight);
+    letter-spacing: 0.2px;
+  }
+}
+
+.inputInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: 0.9rem;
+  font-weight: var(--fontMedium);
+  color: var(--strawberryRed);
+}

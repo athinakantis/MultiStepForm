@@ -1,0 +1,78 @@
+#summaryPage .description {
+  color: var(--coolGray);
+  margin: 0 0 2rem;
+}
+
+.summaryContainer {
+  background-color: var(--alabaster);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.summary .title {
+  margin: 0 0 5px;
+}
+
+.summary :is(.title, .pricing) {
+  color: var(--marineBlue);
+  font-weight: var(--fontBold);
+}
+
+.summary .currentPlan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#changePlan {
+  text-decoration: underline;
+  color: var(--coolGray);
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--purplishBlue);
+  }
+}
+
+.summaryContainer .addOn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addOn {
+  margin: 1.5rem 0 0;
+  font-size: 0.9rem;
+}
+
+.addOn .service {
+  color: var(--coolGray);
+}
+
+.addOn .pricing {
+  color: var(--marineBlue);
+  font-weight: var(--fontMedium);
+}
+
+#totalCost {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+#total {
+  color: var(--lightGray);
+  font-family: var(--fontMedium);
+}
+
+#totalCost .pricing {
+  color: var(--purplishBlue);
+  font-weight: var(--fontBold);
+  font-size: 1.2rem;
+}
+
+.addOn-0 {
+  border-top: 1px solid var(--lightGray);
+  padding: 1.5rem 0 0;
+  margin: 1.5rem 0 0;
+}

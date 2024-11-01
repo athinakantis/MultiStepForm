@@ -1,0 +1,16 @@
+#confirmation {
+  text-align: center;
+  margin: auto;
+  flex: 3;
+  padding: 3rem 4rem 2rem;
+}
+
+#confirmation p {
+  color: var(--coolGray);
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+#confirmation img {
+  margin: 0 0 2rem;
+}

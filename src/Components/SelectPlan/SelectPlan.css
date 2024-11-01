@@ -1,0 +1,103 @@
+.plans {
+  display: flex;
+  gap: 1rem;
+}
+
+.planCard {
+  border: 1px solid var(--lightGray);
+  padding: 1rem;
+  flex: 1;
+  border-radius: 8px;
+  margin: 0 0 2rem;
+
+  &:active {
+    border: 1px solid var(--purplishBlue);
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid var(--purplishBlue);
+  }
+}
+
+.planCard.active {
+  background-color: var(--alabaster);
+  border: 1px solid var(--purplishBlue);
+}
+
+.planCard img {
+  margin: 0 0 2rem;
+}
+
+.planCard .description .title {
+  color: var(--marineBlue);
+  margin: 0 0 0.5rem;
+  font-weight: var(--fontMedium);
+}
+
+.planCard .description .pricing {
+  color: var(--coolGray);
+  font-size: 0.9rem;
+}
+
+.planCard .description .free {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+  color: var(--marineBlue);
+}
+
+.switch {
+  background-color: var(--alabaster);
+  border-radius: 8px;
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.switch p {
+  font-size: 0.9rem;
+  width: 70px;
+  text-align: center;
+  transition: color 300ms;
+  align-self: center;
+}
+
+.switch button {
+  border-radius: 11px;
+  width: 2.3rem;
+  height: 1.3rem;
+  background-color: var(--darkBlue);
+}
+
+.switch button:before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  display: block;
+  left: 5px;
+  transition: left 300ms ease;
+}
+
+.switch button.Yearly::before {
+  left: 58%;
+}
+
+.switch .active {
+  color: var(--marineBlue);
+  font-weight: var(--fontMedium);
+}
+
+.switch .inactive {
+  color: var(--coolGray);
+}
+
+.gamePlanContainer .error {
+  margin: 1rem 0 0 auto;
+  width: max-content;
+}

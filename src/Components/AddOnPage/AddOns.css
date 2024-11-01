@@ -1,0 +1,93 @@
+#addOnsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+#addOnsContainer > p {
+  margin: 0 0 2rem;
+  color: var(--coolGray);
+}
+
+#addOnsContainer .addOn:not(.addOn:last-of-type) {
+  margin: 0 0 1rem;
+}
+
+#addOnContainer .addOn:last-of-type {
+  margin: 0;
+}
+
+#addOnsContainer .addOn {
+  display: flex;
+  padding: 1.3rem 1.5rem;
+  border: 1px solid var(--lightGray);
+  border-radius: 8px;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid var(--purplishBlue);
+    cursor: pointer;
+  }
+
+  &:has(:checked) {
+    background-color: var(--alabaster);
+    border: 1px solid var(--purplishBlue);
+  }
+}
+
+#addOnsContainer .addOn .title {
+  color: var(--marineBlue);
+  font-weight: var(--fontBold);
+  font-size: 1rem;
+  margin: 0 0 0.3rem;
+}
+
+#addOnsContainer .addOn .description {
+  color: var(--lightGray);
+  font-size: 0.9rem;
+}
+
+#addOnsContainer .addOn > div {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#addOnsContainer .pricing {
+  font-size: 0.9rem;
+  color: var(--purplishBlue);
+}
+
+
+/* Checkbox Styling */ 
+#addOnsContainer .addOn input {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 3px;
+  position: relative;
+
+}
+
+.addOn input::after {
+  content: '';
+}
+
+.addOn input:checked {
+  appearance: none;
+}
+
+.addOn input:checked::after {
+  content: '';
+  background-image: url(../../assets/images/icon-checkmark.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1.2rem;
+  height: 1.2rem;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: var(--purplishBlue);
+  border-radius: 3px;
+}

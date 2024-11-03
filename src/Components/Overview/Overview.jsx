@@ -1,5 +1,6 @@
 import './Overview.css';
 import Step from '../Page/Step';
+import bgImg from '../../assets/images/bg-sidebar-desktop.svg'
 
 function StepOverview(props) {
   return (

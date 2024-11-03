@@ -15,7 +15,7 @@ function PlanCard(props) {
         onClick={(e) => handleSelect(e)}
         className={`planCard ${props.gamePlan === props.plan ? 'active' : 'inactive'}`} 
         >
-        <img src={`assets/assets/images/icon-${props.plan.toLowerCase()}.svg`} alt={props.alt} />
+        <img src={props.imgSrc} alt={props.alt} />
         <div className="description">
         <p className="title">{props.plan}</p>
         <p className="pricing">{!props.paymentPlan ? `$${props.monthPrice}/mo` : `$${props.yearPrice}/yr`}</p>

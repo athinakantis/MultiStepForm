@@ -2,6 +2,10 @@ import './SelectPlan.css';
 import Switch from './Switch';
 import PlanCard from './PlanCard';
 import { useState } from 'react';
+import arcade from '../../assets/images/icon-arcade.svg';
+import advanced from '../../assets/images/icon-advanced.svg';
+import pro from '../../assets/images/icon-pro.svg';
+
 
 function SelectPlan(props) {
   const [error, setError] = useState('')
@@ -24,6 +28,7 @@ function SelectPlan(props) {
 
         <div className='plans'>
           <PlanCard
+            imgSrc={arcade}
             gamePlan={props.gamePlan}
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
@@ -35,6 +40,7 @@ function SelectPlan(props) {
             yearPrice='90'
           ></PlanCard>
           <PlanCard
+            imgSrc={advanced}
             gamePlan={props.gamePlan}
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
@@ -46,6 +52,7 @@ function SelectPlan(props) {
             yearPrice='120'
           ></PlanCard>
           <PlanCard
+            imgSrc={pro}
             gamePlan={props.gamePlan}
             setGamePlan={props.setGamePlan}
             paymentPlan={props.paymentPlan}
